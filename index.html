@@ -7,7 +7,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;background-image: url('image/World\ Map.svg');
+  height: 100vh;
+  background-image: url('image/World\ Map.svg');
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -17,48 +18,67 @@ body {
 
 .box {
   position: relative;
-  width: 300px;
-  height: 400px;
+  width: 60%; /* Decrease the width of the box */
+  height: 60%; 
   background: rgba(255,255,255,0.1);
   box-shadow: 0 15px 35px rgba(0,0,0,0.2);
   border-radius: 10px;
   border: 1px solid rgba(255,255,255,0.3);
   backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .box::before {
   content: "";
   position: absolute;
-  top: -50px;
+  top: -75px; /* Increase the size of the image */
   left: 50%;
   transform: translateX(-50%);
-  width: 100px;
-  height: 100px;
+  width: 150px; /* Increase the size of the image */
+  height: 150px; /* Increase the size of the image */
   border-radius: 50%;
   background: url('image/img.png');
   background-size: cover;
+  overflow: hidden; /* Ensure the image does not overflow into the box */
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-around;
 }
 
 .social-links a {
-  width: 50px;
-  height: 50px;
+  width: 30px; 
+  height: 30px; 
   background-size: cover;
+  border-radius: 50%; 
 }
-@media only screen and (min-width: 600px) {
+
+@media only screen and (max-width: 600px) {
   .box {
-    width: 300px;}}
+    width: 90%;
+    height: 70%;
+  }
+  body {
+    background-size: 100% 100%;
+  }
+}
 </style>
 </head>
 <body>
 
-<div class="box"></div>
-<div class="social-links">
-  <a href="https://t.me/your_username" style="background-image: url('https://telegram.org/img/t_logo.png');"></a>
-  <a href="https://github.com/your_username" style="background-image: url('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png');"></a>
-  <a href="https://www.instagram.com/your_username" style="background-image: url('https://www.instagram.com/static/images/ico/favicon.ico/36b3ee2d91ed.ico');"></a>
-  <a href="mailto:your_email@gmail.com" style="background-image: url('https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico');"></a>
+<div class="box">
+  <div></div>
+  <div class="social-links">
+    <a href="https://t.me/mohammadmahditermux" style="background-image: url('https://telegram.org/img/t_logo.png');"></a>
+    <a href="https://github.com/mohammadmahdi-termux" style="background-image: url('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png');"></a>
+    <a href="https://www.instagram.com/mohammadmahditermux" style="background-image: url('https://www.instagram.com/static/images/ico/favicon.ico/36b3ee2d91ed.ico');"></a>
+    <a href="mailto:mohammadmahditermux@gmail.com" style="background-image: url('https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico');"></a>
+  </div>
 </div>
-
 
 </body>
 </html>
