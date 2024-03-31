@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;background-image: url('image/World\ Map.svg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(10px);
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: url('image/img.png');
+  background-size: cover;
+}
+
+.social-links a {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+}
+@media only screen and (min-width: 600px) {
+  .box {
+    width: 300px;}}
+</style>
+</head>
+<body>
+
+<div class="box"></div>
+
+<div class="social-links">
+  <a href="your-telegram-url" style="background-image: url('your-telegram-image-url');"></a>
+  <a href="your-github-url" style="background-image: url('your-github-image-url');"></a>
+  <a href="your-instagram-url" style="background-image: url('your-instagram-image-url');"></a>
+  <a href="your-gmail-url" style="background-image: url('your-gmail-image-url');"></a>
+</div>
+</body>
+</html>
