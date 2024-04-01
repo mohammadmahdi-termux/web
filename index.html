@@ -10,20 +10,16 @@ body {
   height: 100vh;
   background-image: url('image/World\ Map.svg');
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
 
 .box {
   position: relative;
-  width: 60%; /* Decrease the width of the box */
+  width: 60%; 
   height: 60%; 
   background: rgba(255,255,255,0.1);
-  box-shadow: 0 15px 35px rgba(0, 140, 255, 0.281);
+  box-shadow: 0 10px 20px rgba(0, 140, 255, 0.281); 
   border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 1px solid rgba(255,255,255,0.13);
   backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
@@ -34,17 +30,17 @@ body {
 .box::before {
   content: "";
   position: absolute;
-  top: -75px; /* Increase the size of the image */
+  top: -75px; 
   left: 50%;
   transform: translateX(-50%);
-  width: 160px; /* Increase the size of the image */
-  height: 160px; /* Increase the size of the image */
+  width: 160px; 
+  height: 160px;
   border-radius: 50%;
   background: url('image/img.png');
   background-size: cover;
-  overflow: hidden; /* Ensure the image does not overflow into the box */
-}
+  overflow: hidden; 
 
+}
 .social-links {
   display: flex;
   justify-content: space-around;
@@ -89,10 +85,10 @@ body {
 <div class="box">
   <div></div>
   <div class="social-links">
-    <a href="https://t.me/your_username" class="telegram"></a>
-    <a href="https://github.com/your_username" class="github"></a>
-    <a href="https://www.instagram.com/your_username" class="instagram"></a>
-    <a href="mailto:your_email@gmail.com" class="email"></a>
+    <a href="https://t.me/mohammadmahdi_termux" class="telegram"></a>
+    <a href="https://github.com/mohammadmahdi-termux" class="github"></a>
+    <a href="https://www.instagram.com/mohammadmahditermux" class="instagram"></a>
+    <a href="mailto:mohammadmahditermux@gmail.com" class="email"></a>
   </div>
 </div>
 
