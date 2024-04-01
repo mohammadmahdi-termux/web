@@ -51,10 +51,26 @@ body {
 }
 
 .social-links a {
-  width: 30px; 
-  height: 30px; 
+  width: 45px; 
+  height: 45px; 
   background-size: cover;
-  border-radius: 50%; 
+  border-radius: 60%; 
+}
+
+.social-links a.telegram {
+  background-image: url('image/telegram.svg');
+}
+
+.social-links a.github {
+  background-image: url('image/github.svg');
+}
+
+.social-links a.instagram {
+  background-image: url('image/instagram.svg');
+}
+
+.social-links a.email {
+  background-image: url('image/gmail.svg');
 }
 
 @media only screen and (max-width: 600px) {
@@ -73,10 +89,10 @@ body {
 <div class="box">
   <div></div>
   <div class="social-links">
-    <a href="https://t.me/your_username" style="background-image: url('https://telegram.org/img/t_logo.png');"></a>
-    <a href="https://github.com/your_username" style="background-image: url('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png');"></a>
-    <a href="https://www.instagram.com/your_username" style="background-image: url('https://www.instagram.com/static/images/ico/favicon.ico/36b3ee2d91ed.ico');"></a>
-    <a href="mailto:your_email@gmail.com" style="background-image: url('https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico');"></a>
+    <a href="https://t.me/your_username" class="telegram"></a>
+    <a href="https://github.com/your_username" class="github"></a>
+    <a href="https://www.instagram.com/your_username" class="instagram"></a>
+    <a href="mailto:your_email@gmail.com" class="email"></a>
   </div>
 </div>
 
