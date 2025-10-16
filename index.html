@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mohammad Mahdi - Mining Engineering Student | Aspiring Cyber Security Expert | Building my technical journey">
+    <meta name="keywords" content="cyber security, ethical hacking, mining engineering, portfolio, student, developer">
+    <meta name="author" content="Mohammad Mahdi">
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Mohammad Mahdi Portfolio">
+    <title>Mohammad Mahdi | Mining → Cyber Security Journey</title>
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
+    <link rel="preload" href="js/app.js" as="script">
+    <link rel="preload" href="js/nebula.js" as="script">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon & PWA -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Open Graph & Twitter Cards -->
+    <meta property="og:title" content="Mohammad Mahdi - Mining → Cyber Security">
+    <meta property="og:description" content="Mining Engineering Student Learning Cyber Security & Ethical Hacking">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mohammadmahdi-termux.github.io">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mohammad Mahdi - Mining → Cyber Security">
+    <meta name="twitter:description" content="Mining Engineering Student Learning Cyber Security">
+    <meta name="twitter:image" content="images/og-image.jpg">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon" id="themeIcon">🌙</span>
+    </button>
+
+    <!-- Cosmic Code Nebula Canvas -->
+    <canvas id="nebulaCanvas" aria-hidden="true"></canvas>
+
+    <!-- Main Container -->
+    <div class="container" role="main">
+        <div class="main-card" aria-label="Mohammad Mahdi's portfolio">
+            <!-- Header Section -->
+            <header class="header">
+                <div class="profile-section">
+                    <!-- Profile Image -->
+                    <div class="profile-image-container">
+                        <div class="profile-image" role="img" aria-label="Mohammad Mahdi's profile photo">
+                            <!-- Real photo (uncomment and add your photo) -->
+                            <img src="image/img.svg" alt="Mohammad Mahdi, smiling engineering student" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            
+                            <!-- Fallback SVG Avatar -->
+                            <div class="avatar-placeholder" aria-hidden="true">
+                                <svg viewBox="0 0 120 120" xmlns="image/img.svj">
+                                    <defs>
+                                        <radialGradient id="avatarGrad" cx="50%" cy="50%" r="80%">
+                                            <stop offset="0%" stop-color="#667eea" stop-opacity="1"/>
+                                            <stop offset="100%" stop-color="#764ba2" stop-opacity="1"/>
+                                        </radialGradient>
+                                    </defs>
+                                    <circle cx="60" cy="60" r="60" fill="url(#avatarGrad)"/>
+                                    <circle cx="60" cy="45" r="18" fill="#fff" opacity="0.9"/>
+                                    <circle cx="48" cy="40" r="3" fill="#667eea"/>
+                                    <circle cx="72" cy="40" r="3" fill="#667eea"/>
+                                    <path d="M50 65 Q60 75 70 65" stroke="#667eea" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                    <text x="60" y="95" text-anchor="middle" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#fff">MM</text>
+                                    <defs>
+                                        <filter id="glow">
+                                            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                                            <feMerge> 
+                                                <feMergeNode in="coloredBlur"/>
+                                                <feMergeNode in="SourceGraphic"/>
+                                            </feMerge>
+                                        </filter>
+                                    </defs>
+                                    <text x="60" y="95" text-anchor="middle" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#fff" filter="url(#glow)">MM</text>
+                                </svg>
+                            </div>
+                        </div>
+                        
+                        <!-- Profile Status Ring -->
+                        <div class="profile-ring">
+                            <div class="ring-glow"></div>
+                            <div class="ring-active" style="animation-delay: -0.5s;"></div>
+                            <div class="ring-active" style="animation-delay: -1s;"></div>
+                            <div class="ring-active" style="animation-delay: -1.5s;"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Profile Info -->
+                    <div class="profile-info">
+                        <h1 class="name" id="nameElement" aria-label="Mohammad Mahdi">
+                            Mohammad Mahdi
+                        </h1>
+                        
+                        <div class="subtitle" aria-label="Professional description and current status">
+                            <span class="subtitle-part">Mining Engineering Student</span>
+                            <span class="subtitle-separator">→</span>
+                            <span class="subtitle-part">Cyber Security Enthusiast</span>
+                            <div class="status-badge" role="status" aria-label="Current status: Actively learning cyber security">
+                                <span class="status-icon">🚀</span>
+                                <span class="status-text">Learning Mode</span>
+                                <div class="status-pulse"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Profile Stats -->
+                        <div class="profile-stats" aria-label="Learning statistics">
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="4">0</span>
+                                <span class="stat-label">Months Learning</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="6">0</span>
+                                <span class="stat-label">Projects Built</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="3">0</span>
+                                <span class="stat-label">Skills Active</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Dots -->
+                <nav class="nav-dots" role="tablist" aria-label="Main portfolio navigation">
+                    <button 
+                        class="nav-dot nav-dot--active" 
+                        data-section="about" 
+                        data-tooltip="About Mohammad Mahdi" 
+                        role="tab" 
+                        tabindex="0" 
+                        aria-selected="true"
+                        aria-controls="about-section"
+                    >
+                        <span class="nav-dot-inner"></span>
+                        <span class="sr-only">About section</span>
+                    </button>
+                    
+                    <button 
+                        class="nav-dot" 
+                        data-section="skills" 
+                        data-tooltip="Technical Skills & Progress" 
+                        role="tab" 
+                        tabindex="-1" 
+                        aria-selected="false"
+                        aria-controls="skills-section"
+                    >
+                        <span class="nav-dot-inner"></span>
+                        <span class="sr-only">Skills section</span>
+                    </button>
+                    
+                    <button 
+                        class="nav-dot" 
+                        data-section="journey" 
+                        data-tooltip="Learning Journey Timeline" 
+                        role="tab" 
+                        tabindex="-1" 
+                        aria-selected="false"
+                        aria-controls="journey-section"
+                    >
+                        <span class="nav-dot-inner"></span>
+                        <span class="sr-only">Journey section</span>
+                    </button>
+                    
+                    <button 
+                        class="nav-dot" 
+                        data-section="projects" 
+                        data-tooltip="Hands-on Learning Projects" 
+                        role="tab" 
+                        tabindex="-1" 
+                        aria-selected="false"
+                        aria-controls="projects-section"
+                    >
+                        <span class="nav-dot-inner"></span>
+                        <span class="sr-only">Projects section</span>
+                    </button>
+                    
+                    <button 
+                        class="nav-dot" 
+                        data-section="connect" 
+                        data-tooltip="Get In Touch" 
+                        role="tab" 
+                        tabindex="-1" 
+                        aria-selected="false"
+                        aria-controls="connect-section"
+                    >
+                        <span class="nav-dot-inner"></span>
+                        <span class="sr-only">Connect section</span>
+                    </button>
+                </nav>
+            </header>
+
+            <!-- Main Content Area -->
+            <main id="main-content" aria-label="Portfolio content">
+                <!-- About Section -->
+                <section 
+                    id="about-section"
+                    class="content-section content-section--active" 
+                    role="tabpanel" 
+                    aria-labelledby="about-heading"
+                    aria-hidden="false"
+                    tabindex="-1"
+                >
+                    <header class="section-header">
+                        <h2 id="about-heading" class="section-title">
+                            <span class="section-icon" aria-hidden="true">🌟</span>
+                            <span class="section-text">About Me</span>
+                        </h2>
+                        <div class="section-divider"></div>
+                    </header>
+                    
+                    <div class="content-wrapper">
+                        <div class="about-grid">
+                            <div class="about-text">
+                                <p class="intro-paragraph">
+                                    Hello! I'm <span class="highlight" aria-label="Mohammad Mahdi">Mohammad Mahdi</span>, 
+                                    a dedicated <span class="highlight" aria-label="Mining Engineering Student">Mining Engineering</span> 
+                                    student who discovered a new passion in <span class="highlight" aria-label="Cyber Security">Cyber Security</span> 
+                                    and <span class="highlight" aria-label="Ethical Hacking">Ethical Hacking</span>. What began as 
+                                    curiosity about digital systems has evolved into a serious commitment to understanding 
+                                    and protecting the technology that powers our world.
+                                </p>
+
+                                <div class="mission-card" role="complementary" aria-label="Personal mission and background">
+                                    <div class="mission-header">
+                                        <span class="mission-icon" aria-hidden="true">🎯</span>
+                                        <h3 class="mission-title">My Unique Journey</h3>
+                                    </div>
+                                    <div class="mission-content">
+                                        <p>
+                                            <strong>From Geology to Code:</strong> I'm bridging two fascinating worlds - 
+                                            the analytical precision of <span class="highlight">mining engineering</span> 
+                                            and the dynamic complexity of <span class="highlight">cyber security</span>. 
+                                            This unique combination gives me a perspective that few others possess: the ability 
+                                            to think systematically about both physical and digital infrastructure protection.
+                                        </p>
+                                        <ul class="mission-list" role="list" aria-label="Key learning objectives">
+                                            <li role="listitem">🔒 Protect critical infrastructure through security expertise</li>
+                                            <li role="listitem">⚙️ Apply engineering problem-solving to cyber challenges</li>
+                                            <li role="listitem">🌐 Bridge traditional industries with modern technology</li>
+                                            <li role="listitem">💡 Innovate at the intersection of domains</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <p class="story-paragraph">
+                                    For the past <span class="highlight" aria-label="4 months">4 months</span>, I've been 
+                                    immersed in learning <span class="highlight" aria-label="Termux">Termux</span>, 
+                                    <span class="highlight" aria-label="Linux command line">Linux command line</span>, 
+                                    and foundational security concepts. My current focus includes <span class="highlight" aria-label="network security">network security</span>, 
+                                    <span class="highlight" aria-label="web application security">web application security</span>, 
+                                    and understanding how to secure <span class="highlight" aria-label="IoT in mining">IoT systems</span> 
+                                    in industrial environments like mining operations.
+                                </p>
+
+                                <blockquote class="motivation-quote">
+                                    <p>
+                                        <span class="quote-mark">"</span>
+                                        In a world where everything is connected, security isn't just technical - 
+                                        it's about protecting the foundation of our society. From power grids to 
+                                        financial systems to the devices we carry, cyber security is the invisible 
+                                        shield that keeps our world running.
+                                        <span class="quote-mark quote-end">"</span>
+                                    </p>
+                                    <cite aria-label="Personal motivation statement">— Mohammad Mahdi</cite>
+                                </blockquote>
+
+                                <div class="current-focus" role="region" aria-label="Current learning focus areas">
+                                    <h3 class="focus-title">
+                                        <span class="focus-icon" aria-hidden="true">🔍</span>
+                                        Current Focus Areas
+                                    </h3>
+                                    <div class="focus-grid">
+                                        <div class="focus-item">
+                                            <span class="focus-badge">🐍</span>
+                                            <div>
+                                                <h4>Python Fundamentals</h4>
+                                                <p>Building automation scripts and security tools</p>
+                                            </div>
+                                        </div>
+                                        <div class="focus-item">
+                                            <span class="focus-badge">💻</span>
+                                            <div>
+                                                <h4>Termux Environment</h4>
+                                                <p>Mobile Linux setup and command line mastery</p>
+                                            </div>
+                                        </div>
+                                        <div class="focus-item">
+                                            <span class="focus-badge">🌐</span>
+                                            <div>
+                                                <h4>Network Security</h4>
+                                                <p>Understanding protocols and attack surfaces</p>
+                                            </div>
+                                        </div>
+                                        <div class="focus-item">
+                                            <span class="focus-badge">🔒</span>
+                                            <div>
+                                                <h4>Web Vulnerabilities</h4>
+                                                <p>Learning OWASP Top 10 and secure coding</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Skills Section -->
+                <section 
+                    id="skills-section"
+                    class="content-section" 
+                    role="tabpanel" 
+                    aria-labelledby="skills-heading"
+                    aria-hidden="true"
+                    style="display: none;"
+                    tabindex="-1"
+                >
+                    <header class="section-header">
+                        <h2 id="skills-heading" class="section-title">
+                            <span class="section-icon" aria-hidden="true">📊</span>
+                            <span class="section-text">Skills & Progress</span>
+                        </h2>
+                        <div class="section-divider"></div>
+                    </header>
+                    
+                    <div class="content-wrapper">
+                        <div class="section-intro">
+                            <p class="intro-text">
+                                I'm documenting my learning journey with complete transparency. These progress 
+                                bars show my current proficiency levels and what I'm actively working on. 
+                                My goal is continuous improvement through consistent practice and hands-on projects.
+                            </p>
+                        </div>
+
+                        <div class="skills-grid" role="list" aria-label="Technical skills with progress indicators">
+                            <article class="skill-card" role="listitem" tabindex="0">
+                                <header class="skill-header">
+                                    <div class="skill-icon" aria-hidden="true">🐍</div>
+                                    <h3 class="skill-name">Python Programming</h3>
+                                    <span class="skill-level level-beginner" aria-label="Beginner proficiency">Beginner</span>
+                                </header>
+                                <div class="skill-description">
+                                    <p>Building automation scripts, security tools, and learning data analysis for security applications</p>
+                                </div>
+                                <div class="progress-container">
+                                    <div 
+                                        class="progress-bar" 
+                                        data-progress="35" 
+                                        role="progressbar" 
+                                        aria-valuenow="35" 
+                                        aria-valuemin="0" 
+                                        aria-valuemax="100"
+                                        aria-label="Python programming skill: 35% complete"
+                                    ></div>
+                                </div>
+                                <div class="skill-footer">
+                                    <span class="progress-value" aria-hidden="true">35%</span>
+                                    <span class="skill-status">Active Learning</span>
+                                </div>
+                            </article>
+
+                            <article class="skill-card" role="listitem" tabindex="0">
+                                <header class="skill-header">
+                                    <div class="skill-icon" aria-hidden="true">💻</div>
+                                    <h3 class="skill-name">Termux & Linux</h3>
+                                    <span class="skill-level level-beginner" aria-label="Beginner proficiency">Beginner</span>
+                                </header>
+                                <div class="skill-description">
+                                    <p>Mobile Linux environment setup, command line navigation, and basic system administration</p>
+                                </div>
+                                <div class="progress-container">
+                                    <div 
+                                        class="progress-bar" 
+                                        data-progress="40" 
+                                        role="progressbar" 
+                                        aria-valuenow="40" 
+                                        aria-valuemin="0" 
+                                        aria-valuemax="100"
+                                        aria-label="Termux and Linux skills: 40% complete"
+                                    ></div>
+                                </div>
+                                <div class="skill-footer">
+                                    <span class="progress-value" aria-hidden="true">40%</span>
+                                    <span class="skill-status">Daily Practice</span>
+                                </div>
+                            </article>
+
+                            <article class="skill-card" role="listitem" tabindex="0">
+                                <header class="skill-header">
+                                    <div class="skill-icon" aria-hidden="true">🌐</div>
+                                    <h3 class="skill-name">Networking Fundamentals</h3>
+                                    <span class="skill-level level-beginner" aria-label="Beginner proficiency">Beginner</span>
+                                </header>
+                                <div class="skill-description">
+                                    <p>TCP/IP protocols, network architecture, port scanning, and basic security concepts</p>
+                                </div>
+                                <div class="progress-container">
+                                    <div 
+                                        class="progress-bar" 
+                                        data-progress="25" 
+                                        role="progressbar" 
+                                        aria-valuenow="25" 
+                                        aria-valuemin="0" 
+                                        aria-valuemax="100"
+                                        aria-label="Networking fundamentals: 25% complete"
+                                    ></div>
+                                </div>
+                                <div class="skill-footer">
+                                    <span class="progress-value" aria-hidden="true">25%</span>
+                                    <span class="skill-status">Foundation Building</span>
+                                </div>
+                            </article>
+
+                            <article class="skill-card" role="listitem" tabindex="0">
+                                <header class="skill-header">
+                                    <div class="skill-icon" aria-hidden="true">🔧</div>
+                                    <h3 class="skill-name">Git & Version Control</h3>
+                                    <span class="skill-level level-intermediate" aria-label="Intermediate proficiency">Intermediate</span>
+                                </header>
+                                <div class="skill-description">
+                                    <p>Repository management, branching strategies, collaboration workflows, and GitHub usage</p>
+                                </div>
+                                <div class="progress-container">
+                                    <div 
+                                        class="progress-bar" 
+                                        data-progress="70" 
+                                        role="progressbar" 
+                                        aria-valuenow="70" 
+                                        aria-valuemin="0" 
+                                        aria-valuemax="100"
+                                        aria-label="Git and version control: 70% complete"
+                                    ></div>
+                                </div>
+                                <div class="skill-footer">
+                                    <span class="progress-value" aria-hidden="true">70%</span>
+                                    <span class="skill-status">Project Ready</span>
+                                </div>
+                            </article>
+
+                            <article class="skill-card" role="listitem" tabindex="0">
+                                <header class="skill-header">
+                                    <div class="skill-icon" aria-hidden="true">⚙️</div>
+                                    <h3 class="skill-name">Bash Scripting</h3>
+                                    <span class="skill-level level-beginner" aria-label="Beginner proficiency">Beginner</span>
+                                </header>
+                                <div class="skill-description">
+                                    <p>Shell scripting, automation tasks, file manipulation, and system administration scripts</p>
+                                </div>
+                                <div class="progress-container">
+                                    <div 
+                                        class="progress-bar" 
+                                        data-progress="30" 
+                                        role="progressbar" 
+                                        aria-valuenow="30" 
+                                        aria-valuemin="0" 
+                                        aria-valuemax="100"
+                                        aria-label="Bash scripting: 30% complete"
+                                    ></div>
+                                </div>
+                                <div class="skill-footer">
+                                    <span class="progress-value" aria-hidden="true">30%</span>
+                                    <span class="skill-status">Scripting Basics</span>
+                                </div>
+                            </article>
+
+                            <article class="skill-card" role="listitem" tabindex="0">
+                                <header class="skill-header">
+                                    <div class="skill-icon" aria-hidden="true">🔒</div>
+                                    <h3 class="skill-name">Web Security</h3>
+                                    <span class="skill-level level-beginner" aria-label="Beginner proficiency">Beginner</span>
+                                </header>
+                                <div class="skill-description">
+                                    <p>OWASP Top 10 vulnerabilities, secure coding practices, and web application security fundamentals</p>
+                                </div>
+                                <div class="progress-container">
+                                    <div 
+                                        class="progress-bar" 
+                                        data-progress="20" 
+                                        role="progressbar" 
+                                        aria-valuenow="20" 
+                                        aria-valuemin="0" 
+                                        aria-valuemax="100"
+                                        aria-label="Web security knowledge: 20% complete"
+                                    ></div>
+                                </div>
+                                <div class="skill-footer">
+                                    <span class="progress-value" aria-hidden="true">20%</span>
+                                    <span class="skill-status">Getting Started</span>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Skills Legend -->
+                        <div class="skills-legend" aria-label="Skill level definitions">
+                            <div class="legend-item">
+                                <div class="legend-color beginner"></div>
+                                <span>Beginner: Learning fundamentals (0-40%)</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color intermediate"></div>
+                                <span>Intermediate: Practical application (40-70%)</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color advanced"></div>
+                                <span>Advanced: Professional level (70%+)</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Learning Journey Section -->
+                <section 
+                    id="journey-section"
+                    class="content-section" 
+                    role="tabpanel" 
+                    aria-labelledby="journey-heading"
+                    aria-hidden="true"
+                    style="display: none;"
+                    tabindex="-1"
+                >
+                    <header class="section-header">
+                        <h2 id="journey-heading" class="section-title">
+                            <span class="section-icon" aria-hidden="true">🗺️</span>
+                            <span class="section-text">My Learning Journey</span>
+                        </h2>
+                        <div class="section-divider"></div>
+                    </header>
+                    
+                    <div class="content-wrapper">
+                        <div class="journey-intro">
+                            <p class="intro-text">
+                                This timeline documents my transition from mining engineering to cyber security. 
+                                Each milestone represents hands-on learning and real progress in understanding 
+                                the digital security landscape.
+                            </p>
+                        </div>
+
+                        <div class="timeline-container" role="list" aria-label="Learning journey timeline">
+                            <div class="timeline">
+                                <article class="timeline-item timeline-item--past" data-timeline="1" role="listitem">
+                                    <div class="timeline-marker" aria-hidden="true">
+                                        <div class="marker-core"></div>
+                                        <div class="marker-glow"></div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <div class="timeline-header">
+                                            <time class="timeline-date" datetime="2024-06-01">June 2024</time>
+                                            <h3 class="timeline-title">🎓 Discovery Phase</h3>
+                                            <span class="timeline-badge badge--discovery">Discovery</span>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>
+                                                <strong>Termux Discovery:</strong> Found Termux while exploring mobile 
+                                                development tools during summer break. First exposure to Linux command 
+                                                line on Android. Spent weeks learning basic navigation, package management, 
+                                                and file system operations.
+                                            </p>
+                                            <ul class="timeline-achievements" role="list">
+                                                <li role="listitem">✅ Installed and configured Termux environment</li>
+                                                <li role="listitem">✅ Learned basic Linux commands (ls, cd, pwd, mkdir)</li>
+                                                <li role="listitem">✅ Set up text editors (nano, vim)</li>
+                                                <li role="listitem">📚 Completed Linux basics tutorial</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="timeline-item timeline-item--past" data-timeline="2" role="listitem">
+                                    <div class="timeline-marker" aria-hidden="true">
+                                        <div class="marker-core"></div>
+                                        <div class="marker-glow"></div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <div class="timeline-header">
+                                            <time class="timeline-date" datetime="2024-07-15">July 2024</time>
+                                            <h3 class="timeline-title">🐍 Programming Foundations</h3>
+                                            <span class="timeline-badge badge--foundation">Foundation</span>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>
+                                                <strong>Python Learning:</strong> Completed freeCodeCamp's Python for 
+                                                Beginners course. Created first "Hello World" program and built simple 
+                                                automation scripts. Discovered how programming can solve practical security 
+                                                problems.
+                                            </p>
+                                            <ul class="timeline-achievements" role="list">
+                                                <li role="listitem">✅ Completed Python basics (variables, loops, functions)</li>
+                                                <li role="listitem">✅ Built first automation script (file organizer)</li>
+                                                <li role="listitem">✅ Created simple password generator</li>
+                                                <li role="listitem">📚 40+ hours of Python practice</li>
+                                                <li role="listitem">🔗 First GitHub repository created</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="timeline-item timeline-item--past" data-timeline="3" role="listitem">
+                                    <div class="timeline-marker" aria-hidden="true">
+                                        <div class="marker-core"></div>
+                                        <div class="marker-glow"></div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <div class="timeline-header">
+                                            <time class="timeline-date" datetime="2024-08-20">August 2024</time>
+                                            <h3 class="timeline-title">🔧 Development Tools</h3>
+                                            <span class="timeline-badge badge--tools">Tools</span>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>
+                                                <strong>Git & Development Setup:</strong> Learned version control with Git 
+                                                and created proper development environment. Pushed first Python project 
+                                                to GitHub and established workflow for tracking learning progress.
+                                            </p>
+                                            <ul class="timeline-achievements" role="list">
+                                                <li role="listitem">✅ Mastered Git commands (commit, push, pull, branch)</li>
+                                                <li role="listitem">✅ Created GitHub profile and repository</li>
+                                                <li role="listitem">✅ Set up development workflow with READMEs</li>
+                                                <li role="listitem">✅ Learned Markdown for documentation</li>
+                                                <li role="listitem">📂 Organized learning projects in repository</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="timeline-item timeline-item--current" data-timeline="4" role="listitem">
+                                    <div class="timeline-marker timeline-marker--active" aria-hidden="true">
+                                        <div class="marker-core"></div>
+                                        <div class="marker-glow active-glow"></div>
+                                        <div class="marker-pulse"></div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <div class="timeline-header">
+                                            <time class="timeline-date" datetime="2024-10">October 2024 - Present</time>
+                                            <h3 class="timeline-title">🔒 Security Deep Dive</h3>
+                                            <span class="timeline-badge badge--security">Security</span>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>
+                                                <strong>Cyber Security Fundamentals:</strong> Currently immersed in learning 
+                                                core security concepts. Studying network protocols, web vulnerabilities, 
+                                                and ethical hacking techniques. Building this portfolio as my first 
+                                                major front-end project to showcase technical growth.
+                                            </p>
+                                            <div class="current-activities">
+                                                <h4 class="activities-title">Active Learning</h4>
+                                                <div class="activities-grid">
+                                                    <div class="activity-item">
+                                                        <span class="activity-icon">📚</span>
+                                                        <div>
+                                                            <h5>Learning Resources</h5>
+                                                            <p>TryHackMe rooms, OWASP documentation, Linux security guides</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="activity-item">
+                                                        <span class="activity-icon">💻</span>
+                                                        <div>
+                                                            <h5>Current Projects</h5>
+                                                            <p>This portfolio, network scanner, basic security scripts</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="activity-item">
+                                                        <span class="activity-icon">🎯</span>
+                                                        <div>
+                                                            <h5>Next Goals</h5>
+                                                            <p>Burp Suite, Wireshark, CTF challenges, security certifications</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <!-- Future Goals -->
+                        <div class="future-goals" role="region" aria-label="Future learning objectives">
+                            <h3 class="goals-title">
+                                <span class="goals-icon" aria-hidden="true">🚀</span>
+                                Next Milestones
+                            </h3>
+                            <div class="goals-grid">
+                                <div class="goal-card">
+                                    <div class="goal-header">
+                                        <span class="goal-number">1</span>
+                                        <h4 class="goal-title">Complete Security Fundamentals</h4>
+                                    </div>
+                                    <p class="goal-description">Finish TryHackMe's Complete Beginner path and understand core security concepts</p>
+                                    <div class="goal-progress">
+                                        <span class="progress-indicator active">In Progress</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="goal-card">
+                                    <div class="goal-header">
+                                        <span class="goal-number">2</span>
+                                        <h4 class="goal-title">Build Security Tools</h4>
+                                    </div>
+                                    <p class="goal-description">Create practical tools like network scanners, password analyzers, and log parsers</p>
+                                    <div class="goal-progress">
+                                        <span class="progress-indicator">Planning</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="goal-card">
+                                    <div class="goal-header">
+                                        <span class="goal-number">3</span>
+                                        <h4 class="goal-title">Participate in CTFs</h4>
+                                    </div>
+                                    <p class="goal-description">Join Capture The Flag competitions to apply knowledge in real scenarios</p>
+                                    <div class="goal-progress">
+                                        <span class="progress-indicator">Research</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="goal-card">
+                                    <div class="goal-header">
+                                        <span class="goal-number">4</span>
+                                        <h4 class="goal-title">Contribute to Open Source</h4>
+                                    </div>
+                                    <p class="goal-description">Find security-related open source projects and make meaningful contributions</p>
+                                    <div class="goal-progress">
+                                        <span class="progress-indicator">Future</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Projects Section -->
+                <section 
+                    id="projects-section"
+                    class="content-section" 
+                    role="tabpanel" 
+                    aria-labelledby="projects-heading"
+                    aria-hidden="true"
+                    style="display: none;"
+                    tabindex="-1"
+                >
+                    <header class="section-header">
+                        <h2 id="projects-heading" class="section-title">
+                            <span class="section-icon" aria-hidden="true">💻</span>
+                            <span class="section-text">Learning Projects</span>
+                        </h2>
+                        <div class="section-divider"></div>
+                    </header>
+                    
+                    <div class="content-wrapper">
+                        <div class="section-intro">
+                            <p class="intro-text">
+                                These hands-on projects represent my practical learning experience. Each project 
+                                demonstrates specific skills I've developed and the challenges I've overcome. 
+                                The code is available on GitHub for review.
+                            </p>
+                        </div>
+
+                        <div class="projects-grid" role="list" aria-label="Learning projects showcase">
+                            <article class="project-card" role="listitem" tabindex="0" aria-label="Custom Termux Environment Setup">
+                                <div class="project-header">
+                                    <div class="project-icon" aria-hidden="true">💻</div>
+                                    <h3 class="project-title">Custom Termux Environment</h3>
+                                    <p class="project-description">
+                                        Complete Termux setup with custom configurations, automation scripts, 
+                                        and productivity tools. My daily development environment for learning 
+                                        and experimentation on Android.
+                                    </p>
+                                </div>
+                                <div class="project-features">
+                                    <span class="feature-tag" aria-label="Bash scripting">Bash</span>
+                                    <span class="feature-tag" aria-label="Termux configuration">Termux</span>
+                                    <span class="feature-tag" aria-label="Automation scripts">Automation</span>
+                                    <span class="feature-tag" aria-label="Git integration">Git</span>
+                                </div>
+                                <footer class="project-footer">
+                                    <div class="project-meta">
+                                        <span class="meta-item" aria-label="8 GitHub stars">⭐ 8</span>
+                                        <span class="meta-item" aria-label="15 configuration files">📁 15 files</span>
+                                        <span class="meta-item" aria-label="Actively maintained">🔄 Active</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://github.com/mohammadmahdi-termux/termux-setup" 
+                                           class="link-button" 
+                                           target="_blank" 
+                                           rel="noopener noreferrer"
+                                           aria-label="View Termux setup on GitHub">
+                                            <span class="link-icon">📂</span>
+                                            <span class="link-text">View Code</span>
+                                        </a>
+                                    </div>
+                                </footer>
+                            </article>
+
+                            <article class="project-card" role="listitem" tabindex="0" aria-label="Basic Network Scanner Tool">
+                                <div class="project-header">
+                                    <div class="project-icon" aria-hidden="true">🌐</div>
+                                    <h3 class="project-title">Network Scanner</h3>
+                                    <p class="project-description">
+                                        Python-based network discovery tool that scans local networks for 
+                                        active devices and open ports. My first security-related project 
+                                        to understand network protocols and device communication.
+                                    </p>
+                                </div>
+                                <div class="project-features">
+                                    <span class="feature-tag" aria-label="Python programming">Python</span>
+                                    <span class="feature-tag" aria-label="Network protocols">Networking</span>
+                                    <span class="feature-tag" aria-label="Port scanning">Port Scanning</span>
+                                    <span class="feature-tag" aria-label="Data export">JSON Export</span>
+                                </div>
+                                <footer class="project-footer">
+                                    <div class="project-meta">
+                                        <span class="meta-item" aria-label="Working prototype">🔧 Working</span>
+                                        <span class="meta-item" aria-label="Command line interface">CLI</span>
+                                        <span class="meta-item" aria-label="Cross-platform">📱 Cross-platform</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://github.com/mohammadmahdi-termux/network-scanner" 
+                                           class="link-button" 
+                                           target="_blank" 
+                                           rel="noopener noreferrer"
+                                           aria-label="View network scanner on GitHub">
+                                            <span class="link-icon">📂</span>
+                                            <span class="link-text">View Code</span>
+                                        </a>
+                                    </div>
+                                </footer>
+                            </article>
+
+                            <article class="project-card" role="listitem" tabindex="0" aria-label="Responsive Portfolio Website">
+                                <div class="project-header">
+                                    <div class="project-icon" aria-hidden="true">🎨</div>
+                                    <h3 class="project-title">This Portfolio</h3>
+                                    <p class="project-description">
+                                        Modern, responsive portfolio website built with HTML5, CSS3, and vanilla 
+                                        JavaScript. Features cosmic nebula background, interactive elements, 
+                                        and showcases my front-end development skills.
+                                    </p>
+                                </div>
+                                <div class="project-features">
+                                    <span class="feature-tag" aria-label="HTML5 semantic markup">HTML5</span>
+                                    <span class="feature-tag" aria-label="CSS3 animations">CSS3</span>
+                                    <span class="feature-tag" aria-label="JavaScript interactivity">JavaScript</span>
+                                    <span class="feature-tag" aria-label="Responsive design">Responsive</span>
+                                    <span class="feature-tag" aria-label="PWA features">PWA Ready</span>
+                                </div>
+                                <footer class="project-footer">
+                                    <div class="project-meta">
+                                        <span class="meta-item" aria-label="Live and responsive">📱 Live</span>
+                                        <span class="meta-item" aria-label="Interactive animations">🎭 Interactive</span>
+                                        <span class="meta-item" aria-label="Accessibility compliant">♿ A11y</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://github.com/mohammadmahdi-termux/portfolio" 
+                                           class="link-button" 
+                                           target="_blank" 
+                                           rel="noopener noreferrer"
+                                           aria-label="View portfolio source code on GitHub">
+                                            <span class="link-icon">📂</span>
+                                            <span class="link-text">Source Code</span>
+                                        </a>
+                                    </div>
+                                </footer>
+                            </article>
+
+                            <article class="project-card" role="listitem" tabindex="0" aria-label="Mining Data Analysis Project">
+                                <div class="project-header">
+                                    <div class="project-icon" aria-hidden="true">⛏️</div>
+                                    <h3 class="project-title">Mining Data Analysis</h3>
+                                    <p class="project-description">
+                                        University project combining mining engineering with programming. 
+                                        Analyzing geological survey data using Python to identify patterns 
+                                        and optimize mineral extraction processes. Demonstrates data analysis 
+                                        skills applicable to security log analysis.
+                                    </p>
+                                </div>
+                                <div class="project-features">
+                                    <span class="feature-tag" aria-label="Python data analysis">Python</span>
+                                    <span class="feature-tag" aria-label="Data visualization">Charts</span>
+                                    <span class="feature-tag" aria-label="Statistical analysis">Statistics</span>
+                                    <span class="feature-tag" aria-label="Engineering application">Engineering</span>
+                                </div>
+                                <footer class="project-footer">
+                                    <div class="project-meta">
+                                        <span class="meta-item" aria-label="Academic project">🎓 Academic</span>
+                                        <span class="meta-item" aria-label="Data visualization">📈 Visualization</span>
+                                        <span class="meta-item" aria-label="Real geological data">🏔️ Real Data</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://github.com/mohammadmahdi-termux/mining-analysis" 
+                                           class="link-button" 
+                                           target="_blank" 
+                                           rel="noopener noreferrer"
+                                           aria-label="View mining data analysis project on GitHub">
+                                            <span class="link-icon">📂</span>
+                                            <span class="link-text">View Project</span>
+                                        </a>
+                                    </div>
+                                </footer>
+                            </article>
+                        </div>
+
+                        <!-- Project Stats -->
+                        <div class="project-stats-summary" aria-label="Project portfolio statistics">
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <div class="stat-number" data-count="4">0</div>
+                                    <div class="stat-label">Active Projects</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number" data-count="150">0</div>
+                                    <div class="stat-label">Lines of Code</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number" data-count="3">0</div>
+                                    <div class="stat-label">Technologies</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number" data-count="2">0</div>
+                                    <div class="stat-label">GitHub Repos</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Connect Section -->
+                <section 
+                    id="connect-section"
+                    class="content-section" 
+                    role="tabpanel" 
+                    aria-labelledby="connect-heading"
+                    aria-hidden="true"
+                    style="display: none;"
+                    tabindex="-1"
+                >
+                    <header class="section-header">
+                        <h2 id="connect-heading" class="section-title">
+                            <span class="section-icon" aria-hidden="true">🤝</span>
+                            <span class="section-text">Let's Connect</span>
+                        </h2>
+                        <div class="section-divider"></div>
+                    </header>
+                    
+                    <div class="content-wrapper">
+                        <div class="connect-intro">
+                            <div class="intro-text">
+                                <p>
+                                    I'm always excited to connect with fellow learners, discuss cyber security 
+                                    topics, collaborate on projects, or simply share experiences. Whether you 
+                                    want to talk about learning resources, ask questions about my journey, 
+                                    or explore potential collaboration opportunities, I'd love to hear from you!
+                                </p>
+                                <p class="connect-cta">
+                                    <strong>I'm particularly interested in:</strong>
+                                </p>
+                            </div>
+                            
+                            <div class="interests-grid">
+                                <div class="interest-item">
+                                    <span class="interest-icon" aria-hidden="true">👥</span>
+                                    <h4>Learning Partners</h4>
+                                    <p>Collaborate on cyber security challenges and learning projects</p>
+                                </div>
+                                <div class="interest-item">
+                                    <span class="interest-icon" aria-hidden="true">💻</span>
+                                    <h4>Open Source</h4>
+                                    <p>Contribute to security-related open source projects</p>
+                                </div>
+                                <div class="interest-item">
+                                    <span class="interest-icon" aria-hidden="true">👨‍🏫</span>
+                                    <h4>Mentorship</h4>
+                                    <p>Guidance from experienced professionals in security</p>
+                                </div>
+                                <div class="interest-item">
+                                    <span class="interest-icon" aria-hidden="true">🏢</span>
+                                    <h4>Industry Connections</h4>
+                                    <p>Networking in both mining and cyber security fields</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="social-section">
+                            <h3 class="social-title" aria-label="Social media profiles">
+                                <span class="title-icon" aria-hidden="true">🌐</span>
+                                Find Me Online
+                            </h3>
+                            
+                            <div class="social-grid" role="list" aria-label="Social media connections">
+                                <a href="https://t.me/mohammadmahdi_termux" 
+                                   class="social-link social-link--telegram" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer"
+                                   aria-label="Telegram - Message Mohammad Mahdi about learning and projects">
+                                    <div class="social-icon">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                            <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                    <span class="social-label">Telegram</span>
+                                    <span class="social-description" aria-hidden="true">Learning discussions</span>
+                                </a>
+
+                                <a href="https://github.com/mohammadmahdi-termux" 
+                                   class="social-link social-link--github" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer"
+                                   aria-label="GitHub - View Mohammad Mahdi's projects and code">
+                                    <div class="social-icon">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                    <span class="social-label">GitHub</span>
+                                    <span class="social-description" aria-hidden="true">Code & projects</span>
+                                </a>
+
+                                <a href="https://www.instagram.com/mohammadmahditermux" 
+                                   class="social-link social-link--instagram" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer"
+                                   aria-label="Instagram - Follow Mohammad Mahdi's learning journey">
+                                    <div class="social-icon">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                    <span class="social-label">Instagram</span>
+                                    <span class="social-description" aria-hidden="true">Learning journey</span>
+                                </a>
+
+                                <a href="mailto:mohammadmahditermux@gmail.com" 
+                                   class="social-link social-link--email" 
+                                   aria-label="Email - Contact Mohammad Mahdi for collaboration or questions">
+                                    <div class="social-icon">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                    <span class="social-label">Email</span>
+                                    <span class="social-description" aria-hidden="true">Direct contact</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Contact Information -->
+                        <div class="contact-info" aria-label="Additional contact and collaboration information">
+                            <div class="contact-card">
+                                <h3 class="contact-title">
+                                    <span class="title-icon" aria-hidden="true">💬</span>
+                                    What I'm Looking For
+                                </h3>
+                                <div class="contact-list">
+                                    <div class="contact-item">
+                                        <span class="item-icon" aria-hidden="true">👥</span>
+                                        <div class="item-content">
+                                            <h4>Learning Partners</h4>
+                                            <p>Collaborators for cyber security challenges, study groups, and joint projects</p>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item">
+                                        <span class="item-icon" aria-hidden="true">💻</span>
+                                        <div class="item-content">
+                                            <h4>Open Source Opportunities</h4>
+                                            <p>Beginner-friendly security projects where I can contribute meaningfully</p>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item">
+                                        <span class="item-icon" aria-hidden="true">👨‍🏫</span>
+                                        <div class="item-content">
+                                            <h4>Mentorship & Guidance</h4>
+                                            <p>Experienced professionals willing to share knowledge and career advice</p>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item">
+                                        <span class="item-icon" aria-hidden="true">🏢</span>
+                                        <div class="item-content">
+                                            <h4>Industry Connections</h4>
+                                            <p>Networking opportunities in mining technology and cyber security fields</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Contact Form (Optional) -->
+                            <div class="contact-form-section" role="form" aria-label="Contact form for inquiries">
+                                <h3 class="form-title">
+                                    <span class="title-icon" aria-hidden="true">✉️</span>
+                                    Send Message
+                                </h3>
+                                <form id="contactForm" class="contact-form" novalidate>
+                                    <div class="form-group">
+                                        <input 
+                                            type="text" 
+                                            id="contactName" 
+                                            name="name" 
+                                            placeholder="Your Name" 
+                                            required 
+                                            aria-label="Your name"
+                                            maxlength="50"
+                                        >
+                                        <label for="contactName">Name</label>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <input 
+                                            type="email" 
+                                            id="contactEmail" 
+                                            name="email" 
+                                            placeholder="your@email.com" 
+                                            required 
+                                            aria-label="Your email address"
+                                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                        >
+                                        <label for="contactEmail">Email</label>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <select id="contactSubject" name="subject" required aria-label="Message subject">
+                                            <option value="" disabled selected>Select Topic</option>
+                                            <option value="learning">Learning Cyber Security</option>
+                                            <option value="collaboration">Project Collaboration</option>
+                                            <option value="mentoring">Mentorship Request</option>
+                                            <option value="career">Career Advice</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <label for="contactSubject">Subject</label>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <textarea 
+                                            id="contactMessage" 
+                                            name="message" 
+                                            placeholder="Tell me about your project, question, or collaboration idea..." 
+                                            rows="5" 
+                                            required 
+                                            aria-label="Your message"
+                                            maxlength="500"
+                                        ></textarea>
+                                        <label for="contactMessage">Message</label>
+                                        <span class="char-counter" aria-hidden="true">0/500</span>
+                                    </div>
+                                    
+                                    <div class="form-actions">
+                                        <button type="submit" class="submit-button" id="submitButton" disabled>
+                                            <span class="button-content">
+                                                <span class="button-text">Send Message</span>
+                                                <span class="button-loading" aria-hidden="true">
+                                                    <svg viewBox="0 0 24 24">
+                                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/>
+                                                    </svg>
+                                                </span>
+                                            </span>
+                                        </button>
+                                        <button type="reset" class="reset-button">Clear</button>
+                                    </div>
+                                </form>
+                                
+                                <div class="form-messages" aria-live="polite" role="status">
+                                    <div id="formSuccess" class="message message--success" style="display: none;" aria-hidden="true">
+                                        <span class="message-icon" aria-hidden="true">✅</span>
+                                        <span class="message-text">Message sent successfully! I'll get back to you within 48 hours.</span>
+                                    </div>
+                                    <div id="formError" class="message message--error" style="display: none;" aria-hidden="true">
+                                        <span class="message-icon" aria-hidden="true">❌</span>
+                                        <span class="message-text">Something went wrong. Please try again or email me directly.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Final Call to Action -->
+                        <div class="cta-section" role="complementary" aria-label="Final call to action">
+                            <div class="cta-card">
+                                <h3 class="cta-title">
+                                    <span class="cta-icon" aria-hidden="true">🎯</span>
+                                    Ready to Collaborate?
+                                </h3>
+                                <p class="cta-text">
+                                    Whether you're a fellow learner, potential collaborator, or industry professional, 
+                                    I'd love to connect and discuss opportunities to work together on exciting 
+                                    projects at the intersection of engineering and cyber security.
+                                </p>
+                                <div class="cta-buttons">
+                                    <a href="mailto:mohammadmahditermux@gmail.com?subject=Collaboration%20Opportunity" 
+                                       class="cta-button cta-button--primary"
+                                       aria-label="Email Mohammad Mahdi about collaboration">
+                                        Start Collaboration
+                                    </a>
+                                    <a href="https://github.com/mohammadmahdi-termux" 
+                                       class="cta-button cta-button--secondary"
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       aria-label="View projects on GitHub">
+                                        Explore Projects
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/nebula.js" defer></script>
+    <script src="js/app.js" defer></script>
+    
+    <!-- Inline Critical CSS for Screen Reader & Immediate Load -->
+    <style>
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        /* Ensure immediate visibility without loading */
+        .content-section:not(.content-section--active) {
+            display: none;
+        }
+        
+        /* Quick entrance for main elements */
+        .main-card {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            animation: none;
+        }
+    </style>
+</body>
+</html>
