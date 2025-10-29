@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#667eea">
+    <meta name="description" content="Mohammad Mahdi - Mining Engineering Student | Learning Cyber Security & Ethical Hacking">
+    <meta name="keywords" content="cyber security, ethical hacking, mining engineering, Termux, Python, Linux, portfolio">
+    <meta name="author" content="Mohammad Mahdi">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mohammad Mahdi - Mining Engineering Student | Cyber Security Learner">
+    <meta property="og:description" content="Discover my journey from Mining Engineering to Cyber Security. Learning Termux, Python, and Ethical Hacking.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta property="og:image" content="https://yourdomain.com/image/profile.jpg">
+    <meta property="og:site_name" content="Mohammad Mahdi Portfolio">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mohammad Mahdi - Cyber Security Portfolio">
+    <meta name="twitter:description" content="Learning Cyber Security and Ethical Hacking as a Mining Engineering Student.">
+    <meta name="twitter:image" content="https://yourdomain.com/image/profile.jpg">
+    
+    <!-- Multilingual -->
+    <link rel="alternate" hreflang="en" href="https://yourdomain.com/?lang=en">
+    <link rel="alternate" hreflang="fa" href="https://yourdomain.com/?lang=fa">
+    <link rel="canonical" href="https://yourdomain.com">
+    
+    <!-- Favicon & PWA -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mohammad Mahdi",
+        "jobTitle": "Mining Engineering Student & Cyber Security Learner",
+        "description": "Student transitioning from Mining Engineering to Cyber Security, focusing on ethical hacking, Termux, Python, and networking.",
+        "url": "https://yourdomain.com",
+        "sameAs": [
+            "https://t.me/mohammadmahdi_termux",
+            "https://github.com/mohammadmahdi-termux",
+            "https://www.instagram.com/mohammadmahditermux"
+        ],
+        "knowsAbout": ["Cyber Security", "Ethical Hacking", "Python", "Linux", "Termux"],
+        "image": "https://yourdomain.com/image/profile.jpg"
+    }
+    </script>
+    
+    <title>Mohammad Mahdi - Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vazir:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="en">
+    <!-- Background Image -->
+    <img src="World Map.svg" alt="Global world map background representing cyber security exploration" class="bg-image" loading="lazy" onerror="this.style.display='none'; document.body.style.background='linear-gradient(135deg, #667eea 0%, #764ba2 100%)';">
+
+    <!-- Offline Message -->
+    <div class="offline-message" id="offlineMsg">
+        <span class="lang-en">You are offline. Site works via cache.</span>
+        <span class="lang-fa">شما آفلاین هستید. سایت از کش استفاده می‌کند.</span>
+    </div>
+
+    <div class="box">
+        <button class="language-toggle" onclick="toggleLanguage()" aria-label="Toggle Language (EN/FA)">EN/FA</button>
+        <div class="status-indicator" aria-hidden="true"></div>
+        
+        <!-- Header Section -->
+        <div class="header-section">
+    <div class="profile-image" role="img" aria-label="Profile photo of Mohammad Mahdi">
+        <picture>
+            <source srcset="image/profile@2x.webp 2x, image/profile@1x.webp 1x" type="image/webp/svg">
+            <source srcset="image/profile@2x.jpg 2x, image@1x.jpg 1x" type="image/jpeg/svg">
+            <img src="img.svg" 
+                 alt="Mohammad Mahdi smiling in a tech-inspired portrait - Mining Engineering student learning cyber security and ethical hacking" 
+                 loading="lazy" 
+                 onerror="this.src='data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cmFkaWFsR3JhZGllbnQgaWQ9InByb2ZpbGVHcmFkIiBjeD0iNTAlIiBjeT0iNTAlIiByPSI4MCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM2NjdlZWE7c3RvcC1vcGFjaXR5OjEiIC8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNzY0YmEyO3N0b3Atb3BhY2l0eToxIiAvPjwvcmFkaWFsR3JhZGllbnQ+PC9kZWZzPjxjaXJjbGUgY3g9IjYwIiBjeT0iNjAiIHI9IjYwIiBmaWxsPSJ1cmwoI3Byb2ZpbGVHcmFkKSIvPjxjaXJjbGUgY3g9IjYwIiBjeT0iNDUiIHI9IjIwIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjkiLz48Y2lyY2xlIGN4PSI0OCIgY3k9IjQwIiByPSIzIiBmaWxsPSIjNjY3ZWVhIi8+PGNpcmNsZSBjeD0iNzIiIGN5PSI0MCIgcj0iMyIgZmlsbD0iIzY2N2VlYSIvPjxwYXRoIGQ9Ik01MCA2NSBRNjAgNzUgNzAgNjUiIHN0cm9rZT0iIzY2N2VlYSIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L3N2Zz4='; this.alt='Profile avatar fallback';">
+        </picture>
+    </div>
+
+    <div class="profile-info">
+        <h1>Mohammad Mahdi</h1>
+        <p class="subtitle lang-en">Mining Engineering Student | Learning Cyber Security</p>
+        <p class="subtitle lang-fa">دانشجوی مهندسی معدن | در حال یادگیری امنیت سایبری</p>
+        <div class="education-badge" role="img" aria-label="University badge">
+            <span class="lang-en">Mining Engineering Student</span>
+            <span class="lang-fa">دانشجوی مهندسی معدن</span>
+        </div>
+    </div>
+</div>
+
+        <!-- About Section -->
+        <div class="about-section" role="region" aria-labelledby="about-heading">
+            <h2 id="about-heading">
+                <span class="lang-en">About Me</span>
+                <span class="lang-fa">درباره من</span>
+            </h2>
+            
+            <p class="lang-en">
+                Hi! I'm <span class="highlight">Mohammad Mahdi</span>, a <span class="highlight">Mining Engineering</span> 
+                student who's recently discovered the exciting world of <span class="highlight">cyber security</span> 
+                and <span class="highlight">ethical hacking</span>. Although I'm just starting my journey, 
+                this field has become an thrilling adventure for me!
+            </p>
+
+            <p class="lang-fa">
+                سلام! من <span class="highlight">محمد مهدی</span> هستم، دانشجوی <span class="highlight">مهندسی معدن</span> 
+                که اخیراً دنیای هیجان‌انگیز <span class="highlight">امنیت سایبری</span> 
+                و <span class="highlight">هک اخلاقی</span> رو کشف کردم. هرچند تازه‌کارم، 
+                اما این حوزه برام یه ماجراجویی هیجان‌انگیز شده!
+            </p>
+
+            <div class="learning-journey">
+                <h3>
+                    <span class="lang-en">My Learning Journey</span>
+                    <span class="lang-fa">مسیر یادگیری من</span>
+                </h3>
+                <p class="lang-en">
+                    For the past <span class="highlight">few months</span>, I've been diving into <span class="highlight">Termux</span>, 
+                    <span class="highlight">Linux</span> basics, and foundational security concepts. Transitioning 
+                    from mining engineering to the digital world because I want to expand my technical 
+                    skills and become active in <span class="highlight">Information Technology</span> fields.
+                </p>
+                <p class="lang-fa">
+                    در <span class="highlight">چند ماه اخیر</span>، غرق در <span class="highlight">Termux</span>، 
+                    اصول <span class="highlight">لینوکس</span> و مفاهیم پایه امنیت شدم. از مهندسی معدن 
+                    به دنیای دیجیتال مهاجرت کردم چون می‌خوام مهارت‌های فنی‌م رو گسترش بدم 
+                    و در حوزه‌های <span class="highlight">فناوری اطلاعات</span> فعال بشم.
+                </p>
+            </div>
+
+            <p class="lang-en">
+                My goal is to become a <span class="highlight">cyber security specialist</span> through consistent 
+                practice and study. Currently focusing on learning <span class="highlight">Python</span>, 
+                <span class="highlight">networking</span>, and <span class="highlight">web security</span>. 
+                If you're also on this learning journey, I'd love to share experiences and support 
+                each other! 💪
+            </p>
+
+            <p class="lang-fa">
+                هدفم اینه که با تمرین و مطالعه مداوم، به یه <span class="highlight">متخصص امنیت سایبری</span> تبدیل بشم. 
+                الان روی یادگیری <span class="highlight">پایتون</span>، 
+                <span class="highlight">شبکه</span> و <span class="highlight">امنیت وب</span> تمرکز دارم. 
+                اگر شما هم در این مسیر هستید، خوشحال می‌شم تجربیات رو به اشتراک بذاریم و حمایت کنیم! 💪
+            </p>
+
+            <p class="lang-en">
+                Combining <span class="highlight">mining engineering</span> with <span class="highlight">cyber security</span> 
+                is an exciting challenge for me. I want to leverage my analytical skills in both domains 
+                and potentially work on projects related to <span class="highlight">IoT in mining</span> or 
+                <span class="highlight">industrial system security</span> in the future.
+            </p>
+
+            <p class="lang-fa">
+                ترکیب <span class="highlight">مهندسی معدن</span> با <span class="highlight">امنیت سایبری</span> 
+                برام یه چالش هیجان‌انگیزه. می‌خوام از مهارت‌های تحلیلی‌م در هر دو حوزه استفاده کنم 
+                و در آینده روی پروژه‌های مرتبط با <span class="highlight">IoT در معدن</span> یا 
+                <span class="highlight">امنیت سیستم‌های صنعتی</span> کار کنم.
+            </p>
+
+            <!-- Projects Section -->
+            <div class="projects-section">
+                <h3>
+                    <span class="lang-en">Mini Projects</span>
+                    <span class="lang-fa">پروژه‌های کوچک</span>
+                </h3>
+                <div class="project-card">
+                    <h4>🔍 Port Scanner</h4>
+                    <p class="lang-en">A simple Python tool to scan open ports on local networks. Uses socket library for basic reconnaissance.</p>
+                    <p class="lang-fa">ابزار ساده پایتون برای اسکن پورت‌های باز در شبکه‌های محلی. از کتابخانه socket برای شناسایی پایه استفاده می‌کند.</p>
+                    <a href="https://github.com/mohammadmahdi-termux/port-scanner" target="_blank" rel="noopener noreferrer">View Code on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h4>🔐 Simple Encryption Script</h4>
+                    <p class="lang-en">Bash script for basic file encryption/decryption using base64 and openssl. Great for learning crypto basics in Termux.</p>
+                    <p class="lang-fa">اسکریپت Bash برای رمزنگاری/رمزگشایی ساده فایل‌ها با base64 و openssl. عالی برای یادگیری اصول کریپتو در ترموکس.</p>
+                    <a href="https://github.com/mohammadmahdi-termux/encryption-script" target="_blank" rel="noopener noreferrer">View Code on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h4>🌐 Basic Network Analyzer</h4>
+                    <p class="lang-en">Python script to analyze network traffic using scapy. Detects common protocols and logs suspicious activity.</p>
+                    <p class="lang-fa">اسکریپت پایتون برای تحلیل ترافیک شبکه با scapy. پروتکل‌های رایج رو شناسایی و فعالیت‌های مشکوک رو لاگ می‌کند.</p>
+                    <a href="https://github.com/mohammadmahdi-termux/network-analyzer" target="_blank" rel="noopener noreferrer">View Code on GitHub</a>
+                </div>
+            </div>
+
+            <div class="skills-section" role="list" aria-label="Skills">
+                <span class="skill-tag beginner" role="listitem" tabindex="0">
+                    <span class="lang-en">Termux</span>
+                    <span class="lang-fa">ترموکس</span>
+                </span>
+                <span class="skill-tag beginner" role="listitem" tabindex="0">
+                    <span class="lang-en">Linux Basics</span>
+                    <span class="lang-fa">اصول لینوکس</span>
+                </span>
+                <span class="skill-tag beginner" role="listitem" tabindex="0">
+                    <span class="lang-en">Python</span>
+                    <span class="lang-fa">پایتون</span>
+                </span>
+                <span class="skill-tag intermediate" role="listitem" tabindex="0">Git</span>
+                <span class="skill-tag beginner" role="listitem" tabindex="0">
+                    <span class="lang-en">Networking</span>
+                    <span class="lang-fa">شبکه</span>
+                </span>
+                <span class="skill-tag intermediate" role="listitem" tabindex="0">Bash</span>
+                <span class="skill-tag beginner" role="listitem" tabindex="0">
+                    <span class="lang-en">Cyber Security</span>
+                    <span class="lang-fa">امنیت سایبری</span>
+                </span>
+                <span class="skill-tag intermediate" role="listitem" tabindex="0">
+                    <span class="lang-en">Problem Solving</span>
+                    <span class="lang-fa">حل مسئله</span>
+                </span>
+                <span class="skill-tag beginner" role="listitem" tabindex="0">
+                    <span class="lang-en">Web Security</span>
+                    <span class="lang-fa">امنیت وب</span>
+                </span>
+            </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="social-links" role="navigation" aria-label="Social media links">
+            <a href="https://t.me/mohammadmahdi_termux" class="telegram" aria-label="Telegram - Mohammad Mahdi" title="Telegram - Discussions about learning security and Termux" rel="noopener noreferrer" target="_blank">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" fill="#fff"/>
+                </svg>
+            </a>
+            <a href="https://github.com/mohammadmahdi-termux" class="github" aria-label="GitHub - Mohammad Mahdi" title="GitHub - Learning projects and simple scripts" rel="noopener noreferrer" target="_blank">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="#fff"/>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/mohammadmahditermux" class="instagram" aria-label="Instagram - Mohammad Mahdi" title="Instagram - Learning experiences and daily tips" rel="noopener noreferrer" target="_blank">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="#fff"/>
+                </svg>
+            </a>
+            <a href="mailto:mohammadmahditermux@gmail.com" class="email" aria-label="Email - Contact Mohammad Mahdi" title="Email - Questions about learning and collaboration">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="#fff"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <script defer src="js/script.js"></script>
+</body>
+</html>
